@@ -8,8 +8,8 @@ Have fun :)
 
 ___________________________________
 
-Step 1 : Setup The Project
+Step 1 : Setup The Project\n
 Create new project on version 2020+ with 3D module check.
 
-Step 2 : Create your own character
+Step 2 : Create your own character\n
 First thing to do is to create a capsule3D gameObject, it will be your main character.
