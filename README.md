@@ -19,6 +19,8 @@ A gun prefab is provide on the repository, so take it and attach it to the chara
 Last thing to do with our character is to attach a camera. Then take the Main Camera and attach it to your Player.
 Try to setup your camera to have the better first person view render. 
 
+![alt text](https://github.com/tomasit/Workshop_Unity3D/RdmeImg/SimpleCharacter.png) 
+
 
 Step 3 : Made your player moving
 
