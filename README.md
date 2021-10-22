@@ -1,6 +1,15 @@
-WORKSHOP Unity 3D : Make your first simple FPS
+WORKSHOP Unity 3D : Make your first FPS
 
-First step : Setup The Project
-Create new project on version 2020+ then check 3D module.
+Hello ! 
+We are going to create a basic 3D fps in few steps. 
+Each step will contain bonus step to make your game funier and beautiful, but if you never touch Unity, do not feel like
+you have to achieve them, and focus on the basic step.
+Have fun :)
 
-![alt text](https://github.com/tomasit/Workshop_Unity3D/RdmeImg/Capture d’écran de 2021-10-22 18-52-46.png
+___________________________________
+
+Step 1 : Setup The Project
+Create new project on version 2020+ with 3D module check.
+
+Step 2 : Create your own character
+First thing to do is to create a capsule3D gameObject, it will be your main character.
