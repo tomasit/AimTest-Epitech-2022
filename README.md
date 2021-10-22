@@ -16,8 +16,11 @@ Step 2 : Create your own character
 
 First thing to do is to create a capsule3D gameObject, it will be your main character.
 A gun prefab is provide on the repository, so take it and attach it to the character.
+Last thing to do with our character is to attach a camera. Then take the Main Camera and attach it to your Player.
+Try to setup your camera to have the better first person view render. 
+
 
 Step 3 : Made your player moving
 
-Create a c# script, it will be usefull to manage the character movement.
-
+Create a c# script and attach it to the character, it will be usefull to manage the character movement.
+A second script is necessary to move the camera with the mouse.
