@@ -42,5 +42,5 @@ This step will learn you how to instantiate new object in the scene (Object.Inst
 
 In order to create an aim test, you need to create your shooting range. Take some cube and create your own shooting range. In my case it look like that :
 
-![Alt text]()
+![Alt text](https://github.com/tomasit/Workshop_Unity3D/RdmeImg/shootingRange.png)
 
