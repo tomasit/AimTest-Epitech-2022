@@ -1,9 +1,7 @@
-WORKSHOP Unity 3D : Make your first FPS aim train
+WORKSHOP Unity 3D : Make your first FPS aim test
 
 Hello ! 
-We are going to create a basic 3D fps in few steps. 
-Each step will contain bonus step to make your game funier and beautiful, but if you never touch Unity, do not feel like
-you have to achieve them, and focus on the basic step.
+We are going to create a basic 3D fps in few steps.
 Have fun :)
 
 # Prerequieres :
@@ -42,5 +40,9 @@ This step will learn you how to instantiate new object in the scene (Object.Inst
 
 In order to create an aim test, you need to create your shooting range. Take some cube and create your own shooting range. In my case it look like that :
 
-![Alt text](https://github.com/tomasit/Workshop_Unity3D/RdmeImg/shootingRange.png)
+# Step 5 : Create target
+
+Last thing to do is to create targets. With everything you have learn, there is a multiple way to achieve that. But you have to follow two rules :
+- always have at least one target.
+- the spawn position of the target have to be random
 
