@@ -6,6 +6,12 @@ Each step will contain bonus step to make your game funier and beautiful, but if
 you have to achieve them, and focus on the basic step.
 Have fun :)
 
+# Prerequieres :
+* Download UNITY HUB
+* Add an account or create one
+* Add a licence to your unity hub
+* Download UNITY 2020 (lts)
+
 ___________________________________
 
 Step 1 : Setup The Project
