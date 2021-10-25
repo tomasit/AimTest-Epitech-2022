@@ -22,10 +22,10 @@ ___________________________________
 * Attach a rigidBody component to your character. It will be usefull later to made your player move.
 * Attach a Camera to your player to simulate FPS, try to setup your camera to have the better first person view render.
 
-# Step 2 : Made your player moving
+# Step 2 : Made your player move
 
 * Create a c# script, and attach it to the character. This script will handle your character movement (take a look at Input documentation).
-* Create another script, attach it to the camera, and made the camera follow the mouse mouvement (horizontaly but you can handle vertical follow if u want to).
+* Create another script, attach it to the camera, and made the camera follow the mouse mouvement (horizontaly and vertically).
 * For a more realistic FPS change your movement script and try to always walk in direction of where you look.
 
 # Step 3 : Make your player shoot
@@ -38,5 +38,9 @@ This step will learn you how to instantiate new object in the scene (Object.Inst
 * Create a new script and attach it to your gun. Now your job is to Instantiate a bullet each time you shoot and made it go to the right direction.
 * Pay attention to destroy your bullet each time it touch something or when its too far from your player.
 
-# Step 4 : 
+# Step 4 : Create a shooting range
+
+In order to create an aim test, you need to create your shooting range. Take some cube and create your own shooting range. In my case it look like that :
+
+![Alt text]()
 
