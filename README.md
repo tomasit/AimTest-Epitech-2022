@@ -20,6 +20,8 @@ ___________________________________
 * Attach a rigidBody component to your character. It will be usefull later to made your player move.
 * Attach a Camera to your player to simulate FPS, try to setup your camera to have the better first person view render.
 
+![alt text](https://github.com/tomasit/Workshop_Unity3D/blob/master/RdmeImg/simpleCharacte.png)
+
 # Step 2 : Made your player move
 
 * Create a c# script, and attach it to the character. This script will handle your character movement (take a look at Input documentation).
