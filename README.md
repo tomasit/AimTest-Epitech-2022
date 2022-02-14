@@ -14,42 +14,53 @@ des cibles dynamiques.
 * Créez un nouveau projet 3D et drag&drop le contenu du dossier préfab du repository
   dans votre éditeur unity 
 
-___________________________________
+# Step 1 : Setup votre arme et vos balles
 
-# Step 1 : Create your own character
+Nous allons ici découvrir la scène sur laquelle vous allez travailler et setup la balle que nous allons utiliser :
+* Cliquez sur 'Scenes/MainScene' pour ouvrir la scene principale.
+* Celle-ci est composée d'un stand de tir, d'un joueur déjà setup pour se déplacer avec une vue fps.
+* Dans 'Prefab/Object/', drag & drop le préfab 'bullet', celui-ci est simplement composé d'une balle, et vous allez
+  maintenant le setup pour simuler une vraie balle :
+  * clique droit sur l'objet -> prefab -> unpack, pour pouvoir modifier le prefab
+  * nous voulons qu'il detecte les collisions, pour se faire, cliquez sur l'objet et dans l'inspector cliquez sur
+    'Add component' et tapez collider. Vous devez maintenant choisir le collider le plus adapté pour la balle.
+  * Nous voulons maintenant faire en sorte que la balle soit soumise à la physique de l'environnement (poid, gravité...)
+    Cliquez sur 'Add Component' et cherchez 'Rigidbody'. Vous pouvez jouer avec les paramêtres du module, mais pour notre
+    workshop, les paramêtres de bases sont suffisants.
+    
+Votre balle est maintenant setup, vous n'avez plus qu'à supprimer l'ancien prefab de balle dans la fenêtre 'project' et
+drag & drop votre nouvelle balle dans 'project'.
 
-* Create a capsule3D gameObject, it will represent your main character.
-* Take the gun provide on the repository, and attach it to the character.
-* Attach a rigidBody component to your character. It will be usefull later to made your player move.
-* Attach a Camera to your player to simulate FPS, try to setup your camera to have the better first person view render.
+# Step 2 : Système de tir
 
-![alt text](https://github.com/tomasit/Workshop_Unity3D/blob/master/RdmeImg/simpleCharacte.png)
+Maintenant que nous avons finis le setup global, nous allons créer le script permettant de tirer avec notre arme :
+* Dans la fenêtre 'project' -> click droit -> create -> c# script -> l'appeler 'ShootManager'
+* drag & drop ce script sur votre arme.
+* L'utilité de ce script sera de détecter un input et tirer une balle des que vous appuyez sur celui-ci.
+  Pour ce faire, vous devrez suivre ces 3 étapes :
+  * Détecter quand vous appuyer sur une touche [https://docs.unity3d.com/ScriptReference/Input.html].
+  * Ajouter cette ligne pour faire l'animation de tir : "GetComponent<Animator>().SetBool("shoot", true);"
+    et celle ci pour désactiver l'animation : "GetComponent<Animator>().SetBool("shoot", false);
+  * Instantier votre balle [https://docs.unity3d.com/ScriptReference/Object.Instantiate.html]
+  * Donner une force à notre balle pour tirer dans la direction de notre arme (transform.forward ^^). [https://docs.unity3d.com/ScriptReference/Rigidbody.AddForce.html]
+  * Sécuriser la destruction de notre balle. En effet, on a pas envie que notre balle reste sur la scene à vie.
+    Pour régler ce problème, vous devrez détruire l'objet des que celui-ci touche un autre objet. Mais que se passe t-il
+    si l'objet tombe dans le vide ? Vous devrez donc aussi gérer ce cas en donnant par exemple une durée de vie à votre objet.
 
-# Step 2 : Made your player move
+ Vous avez une arme qui tir dans la bonne direction, bien joué!
+ Faisons maintenant un système de visé à notre arme 
 
-* Create a c# script, and attach it to the character. This script will handle your character movement (take a look at Input documentation).
-* Create another script, attach it to the camera, and made the camera follow the mouse mouvement (horizontaly and vertically).
-* For a more realistic FPS change your movement script and try to always walk in direction of where you look.
+# Step 3 : Créez vos cibles
 
-# Step 3 : Make your player shoot
+Vous avez presque finis! Un prefab de cible est disponible dans 'Prefab/Object' mais libre à vous de créer votre propre cible,
+le principe reste le même, qui est de créer un script qui va détecter une collision avec un objet spécifique.
+Pour ce faire vous aurez besoin de créer un script et de le drag & drop dans votre cible puis de :
+* Détecter une collision [https://docs.unity3d.com/ScriptReference/Collider.OnCollisionEnter.html]
+* Détecter quel objet est entré en collision en regardant le tag, le layer ou encore le nom de l'objet (c'est la pire méthode)
+* Incrémenter un compteur pour le score (Pour l'afficher dans de l'UI par exemple) et détruire la cible.
 
-This step will learn you how to instantiate new object in the scene (Object.Instantiate unity documentation) 
-
-* first thing to do is to create your bullet. Create sphere gameObject, change the size to fit to the gun size.
-* Attach a rigidbody component to the bullet
-* Now your bullet is create. You just need to grab the bullet in the hierarchie and drop it in your project. It will create a prefab that you will use when shooting.
-* Create a new script and attach it to your gun. Now your job is to Instantiate a bullet each time you shoot and made it go to the right direction.
-* Pay attention to destroy your bullet each time it touch something or when its too far from your player.
-
-# Step 4 : Create a shooting range
-
-In order to create an aim test, you need to create your shooting range. Take some cube and create your own shooting range. In my case it look like that :
-
-![alt text](https://github.com/tomasit/Workshop_Unity3D/blob/master/RdmeImg/shootingRange.png)
-
-# Step 5 : Create target
-
-Last thing to do is to create targets. With everything you have learn, there is a multiple way to achieve that. But you have to follow two rules :
-- always have at least one target.
-- the spawn position of the target have to be random
-
+Faite de cet objet un prefab comme expliqué plus haut.
+Nous allons maintenant faire un spawner de cible :
+Methode ez :
+* Faire un objet vide et lui coller le script de spawn
+* 
