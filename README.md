@@ -1,15 +1,18 @@
 WORKSHOP Unity 3D : Make your first FPS aim test
 
-Hello ! 
-We are going to create a basic 3D fps in few steps.
-Have fun :)
+Salut à tous, 
+Pour ce workshop, nous allons apprendre comment faire un 'aim test' en première personne.
+Le joueur ainsi que ses déplacements sont déja fournis. 
+Le but de ce workshop sera donc de faire un systeme de tir, de visé et de stand de tir avec
+des cibles dynamiques.
 
-# Prerequieres :
-* Download UNITY HUB
-* Add an account or create one
-* Add a licence to your unity hub
-* Download UNITY 2020 (lts)
-* Create a new 3D project
+# Prérequis :
+* Créez votre compte sur unity (vous avez une licence student avec Epitech)
+* Télécharger unity hub [https://unity3d.com/fr/get-unity/download]
+* Linkez votre licence sur le unity hub
+* Dans le hub : Install -> Add -> installez une version LTS 2020+
+* Créez un nouveau projet 3D et drag&drop le contenu du dossier préfab du repository
+  dans votre éditeur unity 
 
 ___________________________________
 
