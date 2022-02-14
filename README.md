@@ -18,8 +18,8 @@ Le but de ce workshop sera donc de faire un systeme de tir, et de stand de tir a
 Nous allons ici découvrir la scène sur laquelle vous allez travailler et setup la balle que nous allons utiliser :
 * Cliquez sur 'Scenes/MainScene' pour ouvrir la scene principale.
 * Celle-ci est composée d'un stand de tir, d'un joueur déjà setup pour se déplacer avec une vue fps.
-* Dans 'Prefab/Object/', drag & drop le préfab 'bullet', celui-ci est simplement composé d'une balle, et vous allez
-  maintenant le setup pour simuler une vraie balle :
+* Dans 'Prefab/Bullet/Prefabs/', drag & drop le prefab que vous voulez dans le projet,
+  celui-ci est simplement composé d'une balle, et vous allez maintenant le setup pour simuler une vraie balle :
   * clique droit sur l'objet -> prefab -> unpack, pour pouvoir modifier le prefab
   * nous voulons qu'il detecte les collisions, pour se faire, cliquez sur l'objet et dans l'inspector cliquez sur
     'Add component' et tapez collider. Vous devez maintenant choisir le collider le plus adapté pour la balle.
