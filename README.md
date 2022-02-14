@@ -1,10 +1,9 @@
-WORKSHOP Unity 3D : Make your first FPS aim test
+WORKSHOP Unity 3D : Créer ton propre aim test en Fps
 
 Salut à tous, 
 Pour ce workshop, nous allons apprendre comment faire un 'aim test' en première personne.
 Le joueur ainsi que ses déplacements sont déja fournis. 
-Le but de ce workshop sera donc de faire un systeme de tir, de visé et de stand de tir avec
-des cibles dynamiques.
+Le but de ce workshop sera donc de faire un systeme de tir, et de stand de tir avec des cibles dynamiques.
 
 # Prérequis :
 * Créez votre compte sur unity (vous avez une licence student avec Epitech)
@@ -38,10 +37,11 @@ Maintenant que nous avons finis le setup global, nous allons créer le script pe
 * drag & drop ce script sur votre arme.
 * L'utilité de ce script sera de détecter un input et tirer une balle des que vous appuyez sur celui-ci.
   Pour ce faire, vous devrez suivre ces 3 étapes :
+  * Déclarer un 'public GameObject bullet', cela vous permettra de référencer votre préfab de balle directement dans l'éditeur.
   * Détecter quand vous appuyer sur une touche [https://docs.unity3d.com/ScriptReference/Input.html].
   * Ajouter cette ligne pour faire l'animation de tir : "GetComponent<Animator>().SetBool("shoot", true);"
     et celle ci pour désactiver l'animation : "GetComponent<Animator>().SetBool("shoot", false);
-  * Instantier votre balle [https://docs.unity3d.com/ScriptReference/Object.Instantiate.html]
+  * Instantier votre balle (a.k.a le GameObject bullet de tout à l'heure) [https://docs.unity3d.com/ScriptReference/Object.Instantiate.html]
   * Donner une force à notre balle pour tirer dans la direction de notre arme (transform.forward ^^). [https://docs.unity3d.com/ScriptReference/Rigidbody.AddForce.html]
   * Sécuriser la destruction de notre balle. En effet, on a pas envie que notre balle reste sur la scene à vie.
     Pour régler ce problème, vous devrez détruire l'objet des que celui-ci touche un autre objet. Mais que se passe t-il
@@ -61,6 +61,21 @@ Pour ce faire vous aurez besoin de créer un script et de le drag & drop dans vo
 
 Faite de cet objet un prefab comme expliqué plus haut.
 Nous allons maintenant faire un spawner de cible :
-Methode ez :
+* Dans votre scene : GameObject -> 3D object -> Plane, ce sera votre rectangle sur lequel vos cibles vont spawn
 * Faire un objet vide et lui coller le script de spawn
-* 
+* faire une variable 'public Transform spawnZone' qui referencera le plane que vous venez de faire
+* Nous pouvons imaginer plusieurs systèmes de spawn, pour ce workshop nous ferons un système très simple,
+  mais si vous voulez faire autrement, vous n'êtes pas obligé de suivre la prochaine partie du tuto :
+  * faire un 'private GameObject _cibleReference'
+  * Dans Start() faire -> '_cibleReference = Instantiate(...)' pour toujours avoir une référence sur notre cible.
+  * Etant donné que la cible s'auto détruit, cela nous permet de respawn notre cible des que la référence est égale à null.
+
+Spawn sur la zone de spawn :
+* grâce au mesh collider du plane que vous avez créer, vous pourrez retrouver sa taille (mesh.bounds.size).
+* Vous avez remarqués que Instantiate peut prendre en argument une position et une rotation.
+  Nous avons donc la position de notre zone de spawn ('spawnZone.transform') ainsi que sa taille. Avec ceci, vous pourez faire spawn vos cibles
+  aléatoirement entre la position - (taille / 2) et la position + (taille / 2) sur chaque axes.
+  /!\ n'oubliez pas de multiplier la taille par la scale de 'spawnPos'
+
+Vous avez maintenant un spawn aléatoire dans une zone et un système de spawn.
+Bien joué à vous, vous allez pouvoir considérablement augmenter votre skill sur CS-Go
