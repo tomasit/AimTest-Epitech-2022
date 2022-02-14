@@ -10,7 +10,7 @@ Le but de ce workshop sera donc de faire un systeme de tir, et de stand de tir a
 * Télécharger unity hub [https://unity3d.com/fr/get-unity/download]
 * Linkez votre licence sur le unity hub
 * Dans le hub : Install -> Add -> installez une version LTS 2020+
-* Créez un nouveau projet 3D et drag&drop le contenu du dossier préfab du repository
+* Créez un nouveau projet 3D et drag&drop le contenu du repository dans unity
   dans votre éditeur unity 
 
 # Step 1 : Setup votre arme et vos balles
