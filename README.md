@@ -39,8 +39,7 @@ Maintenant que nous avons finis le setup global, nous allons créer le script pe
   Pour ce faire, vous devrez suivre ces 3 étapes :
   * Déclarer un 'public GameObject bullet', cela vous permettra de référencer votre préfab de balle directement dans l'éditeur.
   * Détecter quand vous appuyer sur une touche [https://docs.unity3d.com/ScriptReference/Input.html].
-  * Ajouter cette ligne pour faire l'animation de tir : "GetComponent<Animator>().SetBool("shoot", true);"
-    et celle ci pour désactiver l'animation : "GetComponent<Animator>().SetBool("shoot", false);
+  * Ajouter cette ligne pour faire l'animation de tir : "GetComponent<Animator>().SetTrigger("shoot")"
   * Instantier votre balle (a.k.a le GameObject bullet de tout à l'heure) [https://docs.unity3d.com/ScriptReference/Object.Instantiate.html]
   * Donner une force à notre balle pour tirer dans la direction de notre arme (transform.forward ^^). [https://docs.unity3d.com/ScriptReference/Rigidbody.AddForce.html]
   * Sécuriser la destruction de notre balle. En effet, on a pas envie que notre balle reste sur la scene à vie.
