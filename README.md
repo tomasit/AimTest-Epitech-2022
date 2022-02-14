@@ -47,8 +47,7 @@ Maintenant que nous avons finis le setup global, nous allons créer le script pe
     Pour régler ce problème, vous devrez détruire l'objet des que celui-ci touche un autre objet. Mais que se passe t-il
     si l'objet tombe dans le vide ? Vous devrez donc aussi gérer ce cas en donnant par exemple une durée de vie à votre objet.
 
- Vous avez une arme qui tir dans la bonne direction, bien joué!
- Faisons maintenant un système de visé à notre arme 
+Vous avez une arme qui tir dans la bonne direction, bien joué!
 
 # Step 3 : Créez vos cibles
 
