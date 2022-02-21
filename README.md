@@ -41,7 +41,7 @@ Maintenant que nous avons finis le setup global, nous allons créer le script pe
   * Détecter quand vous appuyer sur une touche [https://docs.unity3d.com/ScriptReference/Input.html].
   * Ajouter cette ligne pour faire l'animation de tir : "GetComponent<Animator>().SetTrigger("shoot")"
   * Instantier votre balle (a.k.a le GameObject bullet de tout à l'heure) [https://docs.unity3d.com/ScriptReference/Object.Instantiate.html]
-  * Donner une force à notre balle pour tirer dans la direction de notre arme (transform.forward ^^). [https://docs.unity3d.com/ScriptReference/Rigidbody.AddForce.html]
+  * Donner une force à notre balle pour tirer dans la direction de notre arme (transform.forward :) ). [https://docs.unity3d.com/ScriptReference/Rigidbody.AddForce.html]
   * Sécuriser la destruction de notre balle. En effet, on a pas envie que notre balle reste sur la scene à vie.
     Pour régler ce problème, vous devrez détruire l'objet des que celui-ci touche un autre objet. Mais que se passe t-il
     si l'objet tombe dans le vide ? Vous devrez donc aussi gérer ce cas en donnant par exemple une durée de vie à votre objet.
