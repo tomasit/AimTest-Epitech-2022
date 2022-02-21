@@ -48,12 +48,6 @@ Maintenant que nous avons finis le setup global, nous allons créer le script pe
 
 Vous avez une arme qui tir dans la bonne direction, bien joué!
 
-Etapes Bonus : 
-* Créer un système de particule pour le tir / l'impact de la balle quand elle touche quelque chose
-* Mettre un sond de tir / impact de la balle
-* Faire de l'UI :
-  * Nombre de balle qui te reste + système de rechargement
-
 # Step 3 : Créez vos cibles
 
 Vous avez presque finis! Un prefab de cible est disponible dans 'Prefab/Object' mais libre à vous de créer votre propre cible,
@@ -84,3 +78,15 @@ Spawn sur la zone de spawn :
 Vous avez maintenant un spawn aléatoire dans une zone et un système de spawn.
 Bien joué à vous, vous avez maintenant une base à améliorer, si vous avez encore du temps, regardez les étapes
 bonus, qui rendront votre jeu plus agréable à jouer et plus réaliste.
+
+  
+Etapes Bonus : 
+* Créer un système de particule pour le tir / l'impact de la balle quand elle touche quelque chose
+* Mettre un sond de tir / impact de la balle
+* Faire une cible qui te donne plus de points en fonction de l'endroit ou tu touches
+* Faire un mode de jeu contre-la-montre pour marquer le plus de points en un temps donné
+* Faire un système de visé
+* Faire de l'UI :
+  * Afficher le nombre de balle qui te reste et du coup faire un système de rechargement
+  * Afficher le score
+  * Afficher un curseur au milieu de l'écran pour indiquer la ou tu tires
