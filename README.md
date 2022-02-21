@@ -49,7 +49,7 @@ Vous avez une arme qui tir dans la bonne direction, bien joué!
 
 # Step 3 : Créez vos cibles
 
-Vous avez presque finis! Un prefab de cible est disponible dans 'Prefab/Object' mais libre à vous de créer votre propre cible,
+Vous avez presque finis! Un prefab de cible est disponible dans 'Prefab/Target' mais libre à vous de créer votre propre cible,
 le principe reste le même, qui est de créer un script qui va détecter une collision avec un objet spécifique.
 Pour ce faire vous aurez besoin de créer un script et de le drag & drop dans votre cible puis de :
 * Détecter une collision [https://docs.unity3d.com/ScriptReference/Collider.OnCollisionEnter.html]
