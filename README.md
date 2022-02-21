@@ -48,6 +48,12 @@ Maintenant que nous avons finis le setup global, nous allons créer le script pe
 
 Vous avez une arme qui tir dans la bonne direction, bien joué!
 
+Etapes Bonus : 
+* Créer un système de particule pour le tir / l'impact de la balle quand elle touche quelque chose
+* Mettre un sond de tir / impact de la balle
+* Faire de l'UI :
+  * Nombre de balle qui te reste + système de rechargement
+
 # Step 3 : Créez vos cibles
 
 Vous avez presque finis! Un prefab de cible est disponible dans 'Prefab/Object' mais libre à vous de créer votre propre cible,
@@ -76,4 +82,5 @@ Spawn sur la zone de spawn :
   /!\ n'oubliez pas de multiplier la taille par la scale de 'spawnPos'
 
 Vous avez maintenant un spawn aléatoire dans une zone et un système de spawn.
-Bien joué à vous, vous allez pouvoir considérablement augmenter votre skill sur CS-Go
+Bien joué à vous, vous avez maintenant une base à améliorer, si vous avez encore du temps, regardez les étapes
+bonus, qui rendront votre jeu plus agréable à jouer et plus réaliste.
