@@ -82,6 +82,7 @@ bonus, qui rendront votre jeu plus agréable à jouer et plus réaliste.
 Etapes Bonus : 
 * Créer un système de particule pour le tir / l'impact de la balle quand elle touche quelque chose
 * Mettre un sond de tir / impact de la balle
+* Faire une animation sur l'arme et la camera qui donne une impression de recul
 * Faire une cible qui te donne plus de points en fonction de l'endroit ou tu touches
 * Faire un mode de jeu contre-la-montre pour marquer le plus de points en un temps donné
 * Faire un système de visé
